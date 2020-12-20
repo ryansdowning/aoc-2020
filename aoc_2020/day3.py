@@ -65,10 +65,7 @@ from functools import reduce
 
 def solve1(grid, rise=1, run=3):
     n = len(grid[0])
-    trees = 0
-    for idx, row in enumerate(grid[1::rise], 1):
-        trees += 1 if row[run*idx % n] == '#' else 0
-    return trees
+    return sum(row[run*idx % n] == '#' for idx, row in enumerate(grid[::rise]))
 
 
 """
@@ -95,7 +92,7 @@ def solve2(grid, slopes=((1, 1), (1, 3), (1, 5), (1, 7), (2, 1))):
 
 
 if __name__ == "__main__":
-    with open('../data/day3_test.txt', 'r') as f:
+    with open('../data/day3.txt', 'r') as f:
         data = f.read().split('\n')
     print(solve1(data))
     print(solve2(data))
