@@ -11,7 +11,7 @@ def solve2(grid, slopes=((1, 1), (1, 3), (1, 5), (1, 7), (2, 1))):
 
 
 if __name__ == "__main__":
-    with open('../data/day3.txt', 'r') as f:
+    with open('../data/day03.txt', 'r') as f:
         data = f.read().split('\n')
     print(solve1(data))
     print(solve2(data))

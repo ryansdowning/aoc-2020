@@ -19,7 +19,7 @@ def solve2(boarding_passes):
 
 
 if __name__ == "__main__":
-    with open('../data/day5.txt', 'r') as f:
+    with open('../data/day05.txt', 'r') as f:
         data = f.read().split('\n')
     print(solve1(data))
     print(solve2(data))

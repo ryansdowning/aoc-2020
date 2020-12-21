@@ -41,7 +41,7 @@ def solve2(data, window=25):
 
 
 if __name__ == "__main__":
-    with open('../data/day9.txt', 'r') as f:
+    with open('../data/day09.txt', 'r') as f:
         data = f.read().split('\n')
         data = list(map(int, data))
     print(solve1(data))

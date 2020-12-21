@@ -17,7 +17,7 @@ def solve2(nums, target=2020):
 
 
 if __name__ == "__main__":
-    with open('../data/day1.txt', 'r') as f:
+    with open('../data/day01.txt', 'r') as f:
         data = f.read().split('\n')
         data = list(map(int, data))
     print(solve1(data))

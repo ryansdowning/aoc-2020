@@ -34,7 +34,7 @@ def solve2(operations):
 
 
 if __name__ == "__main__":
-    with open('../data/day8.txt', 'r') as f:
+    with open('../data/day08.txt', 'r') as f:
         data = f.read().split('\n')
         data = [i.split() for i in data]
     print(solve1(data))

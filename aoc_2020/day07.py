@@ -45,7 +45,7 @@ def solve2(bags):
 
 
 if __name__ == "__main__":
-    with open('../data/day7.txt', 'r') as f:
+    with open('../data/day07.txt', 'r') as f:
         data = f.read().split('\n')
     bags = parse_bags(data)
     print(solve1(bags))

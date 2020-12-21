@@ -23,7 +23,7 @@ def solve2(passwords):
 
 
 if __name__ == "__main__":
-    with open('../data/day2.txt', 'r') as f:
+    with open('../data/day02.txt', 'r') as f:
         data = f.read().split('\n')
     print(solve1(data))
     print(solve2(data))

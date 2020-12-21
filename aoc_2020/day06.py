@@ -16,7 +16,7 @@ def solve2(groups):
 
 
 if __name__ == "__main__":
-    with open('../data/day6.txt', 'r') as f:
+    with open('../data/day06.txt', 'r') as f:
         data = f.read().split('\n\n')
         data = [i.split() for i in data]
     print(solve1(data))

@@ -37,7 +37,7 @@ def solve2(passports):
 
 
 if __name__ == "__main__":
-    with open('../data/day4.txt', 'r') as f:
+    with open('../data/day04.txt', 'r') as f:
         data = f.read().split('\n\n')
         data = [dict(j.split(':') for j in i.split()) for i in data]
     print(solve1(data))
