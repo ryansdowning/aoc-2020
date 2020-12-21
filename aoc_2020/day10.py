@@ -15,13 +15,11 @@ def solve2(adapters):
     sorted_adapters = sorted(adapters)
     max_adapter = sorted_adapters[-1] + 3
     sorted_adapters.append(max_adapter)
-    arrangements = {0: 1}
+    partial_sums = [0 for _ in range(max_adapter + 1)]
+    partial_sums[0] = 1
     for adapter in sorted_adapters:
-        arrangements[adapter] = 0
-        for i in (1, 2, 3):
-            if adapter - i in arrangements:
-                arrangements[adapter] += arrangements[adapter - i]
-    return arrangements[max_adapter]
+        partial_sums[adapter] = sum(partial_sums[max(0, adapter - 3): adapter])
+    return partial_sums[max_adapter]
 
 
 if __name__ == "__main__":
