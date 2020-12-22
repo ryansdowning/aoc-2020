@@ -1,6 +1,3 @@
-from collections import defaultdict
-
-
 def update_memory(num, idx, memory):
     if num in memory:
         old_idx, _ = memory[num]
