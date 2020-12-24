@@ -6,6 +6,8 @@ authors = ["Ryan Downing <ryansdowning1@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+numpy = "^1.19.4"
+scipy = "^1.5.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
