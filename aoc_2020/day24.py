@@ -20,10 +20,7 @@ def solve1(directions):
 
 
 def update_tile(tile, n_black_adj):
-    if tile:
-        return -int(n_black_adj == 0 or n_black_adj > 2) + 1
-    else:
-        return int(n_black_adj == 2)
+    return not (n_black_adj == 0 or n_black_adj > 2) if tile else n_black_adj == 2
 
 
 def solve2(directions):
