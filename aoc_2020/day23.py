@@ -4,12 +4,13 @@ from itertools import count
 def play(cups, rounds):
     cup_hash = {i: j for i, j in zip(cups, cups[1:] + [cups[0]])}
     curr = cups[0]
+    n = len(cups)
     for _ in range(rounds):
         i = curr
         pickup = [i := cup_hash[i] for _ in range(3)]
         dest = next(
             cup for i in count(1)
-            if (cup if (cup := curr - i) > 0 else (cup := len(cups) + cup)) not in pickup
+            if (cup if (cup := curr - i) > 0 else (cup := n + cup)) not in pickup
         )
 
         cup_hash[curr], cup_hash[pickup[-1]], cup_hash[dest] = cup_hash[pickup[-1]], cup_hash[dest], cup_hash[curr]
